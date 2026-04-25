@@ -5,6 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>animation</title>
     <link rel="stylesheet" href="../css/style52.css">
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    }
+
+    div {
+        width: 50px;
+        height: 50px;
+        margin: 20% auto;
+        position: relative;
+        background-color: #EEE;
+        border-radius: 50%;
+        border: 5px solid #E91E63;
+        border-left-color: transparent;
+        animation-name: spin;
+        animation-timing-function: linear;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    div::before {
+        content: " ";
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        left: -12px;
+        bottom: -12px;
+        border: 5px solid #2196F3;
+        border-right-color: transparent;
+        animation-name: spin;
+        animation-timing-function: linear;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    div::after {
+        content: " ";
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        left: -20px;
+        bottom: -20px;
+        border: 5px solid #FF9800;
+        border-bottom-color: transparent;
+        animation-name: spin;
+        animation-timing-function: linear;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    div:hover {
+        animation-play-state: paused;
+    }
+
+    div:hover::before {
+        animation-play-state: paused;
+    }
+
+    div:hover::after {
+        animation-play-state: paused;
+    }
+
+    @keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    }
+    </style>
 </head>
 <body>
     <div></div>
