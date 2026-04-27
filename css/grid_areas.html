@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid areas</title>
+    <link rel="stylesheet" href="../css/style41.css">
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+.layout {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(10 , 1fr);
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas:     
+    "header header header header header header header header header header"
+    "section section section section section section section section aside aside"
+    "footer footer footer footer footer footer footer footer footer footer";
+}
+
+header::before {
+    content: "Header";
+}
+
+header {
+    grid-area: header;
+    background-color: #1ba7d4;
+    color: white;
+    padding: 10px;
+}
+
+section::before {
+    content: "Section";
+}
+
+section {
+    grid-area: section;
+    background-color: orangered;
+    color: white;
+    padding: 10px;
+}
+
+aside::before {
+    content: "Aside";
+}
+
+aside {
+    grid-area: aside;
+    background-color: gray;
+    color: white;
+    padding: 10px;
+}
+
+footer::before {
+    content: "Footer";
+}
+
+footer {
+    grid-area: footer;
+    background-color: lightseagreen;
+    color: white;
+    padding: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <header></header>
+        <section></section>
+        <aside></aside>
+        <footer></footer>
+    </div>
+</body>
+</html>
