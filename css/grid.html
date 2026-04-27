@@ -5,6 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>grid</title>
     <link rel="stylesheet" href="../css/style40.css">
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.grid {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: 40px 1fr;
+    gap: 25px 25px;
+}
+
+.grid div {
+    background-color: #22517cab;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.grid .child1::before {
+    content: "Element 1";
+}
+
+.grid .child2::before {
+    content: "Element 2";
+}
+
+.grid .child3::before {
+    content: "Element 3";
+}
+
+.grid .child4::before {
+    content: "Element 4";
+}
+
+.grid .child5::before {
+    content: "Element 5";
+}
+
+.grid .child6::before {
+    content: "Element 6";
+}
+    </style>
 </head>
 <body>
     <div class="grid">
