@@ -5,6 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>grid</title>
     <link rel="stylesheet" href="../css/style44.css">
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+.grid {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2 , 1fr);
+    align-content: space-between;
+}
+
+.grid div {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #e91e63;
+    color: white;
+}
+    </style>
 </head>
 <body>
     <div class="grid">
