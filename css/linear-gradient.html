@@ -5,6 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>linear-gradient</title>
     <link rel="stylesheet" href="../css/style38.css">
+    <style>
+        *body
+{
+    box-sizing: border-box;
+}
+
+div {
+    width: 600px;
+    height: 75px;
+    background-color: #DDD;
+    margin: auto;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    line-height: 75px;
+    text-align: center;
+    position: relative;
+    border: 10px solid;
+    border-image: linear-gradient(
+        to right,
+        #d35400 0%,
+        #d35400 20%,
+        #2980b9 20%,
+        #2980b9 40%,
+        #27ae60 40%,
+        #27ae60 60%,
+        #e85e75 60%,
+        #e85e75 80%,
+        #8e44ad 80%,
+        #8e44ad 100%
+    ) 1;
+}
+
+div::first-letter {
+    color: #e74c3c;
+}
+    </style>
 </head>
 <body>
     <div>Elzero</div>
